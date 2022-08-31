@@ -1,4 +1,4 @@
-/*Copyright 2021 Lotier
+/*Copyright 2022 Lotier
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -19,14 +19,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "config_common.h"
 
 #define VENDOR_ID       0x6A62 // Initials (lowercase) in hex
-#define PRODUCT_ID      0x444C // DL in hex
+#define PRODUCT_ID      0x4A42 // JB in hex
 #define DEVICE_VER      0x0002
 #define MANUFACTURER    lotier
-#define PRODUCT         DELIGHT
+#define PRODUCT         JBOARD
 
 /* key matrix size */
-#define MATRIX_ROWS 5
-#define MATRIX_COLS 15
+#define MATRIX_ROWS 6
+#define MATRIX_COLS 16
+#define DIODE_DIRECTION COL2ROW
 
 /*
  * Keyboard Matrix Assignments
@@ -39,14 +40,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
 
-#define MATRIX_ROW_PINS { D7, C0, D5, D6, C1 }
-#define MATRIX_COL_PINS { A0, A1, A2, A3, A4, B0, B1, B2, B3, B4, C6, C5, C4, C3, C2 }
+#define MATRIX_ROW_PINS {D6, B7, B6, B5, D7, C6}
+// #define MATRIX_COL_PINS { A0, A1, A2, A3, A4, B0, B1, B2, B3, B4, C6, C5, C4, C3, C2 }
 #define UNUSED_PINS
 
-/* COL2ROW, ROW2COL*/
-#define DIODE_DIRECTION COL2ROW
-
-#define USB_MAX_POWER_CONSUMPTION 100
+// We have an Adafruit BLE SPI Friend board attached
+#define AdafruitBleResetPin D0
+#define AdafruitBleCSPin D1
+#define AdafruitBleIRQPin A5
+#define AdafruitBlePowerPin -1
 
 /*
  * Split Keyboard specific options, make sure you have 'SPLIT_KEYBOARD = yes' in your rules.mk, and define SOFT_SERIAL_PIN.
@@ -138,3 +140,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define BOOTMAGIC_LITE_ROW 0
 #define BOOTMAGIC_LITE_COLUMN 0
 
+#define F_SCL 400000
