@@ -124,5 +124,7 @@ bool matrix_scan_custom(matrix_row_t current_matrix[]) {
       matrix_has_changed |= read_cols_on_row(current_matrix, current_row);
     }
 
+    dprint("matrix_scan_custom complete\n");
+
     return matrix_has_changed;
 }

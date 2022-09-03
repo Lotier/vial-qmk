@@ -1,12 +1,9 @@
-# Lotier
-
-![JBOARD](https://github.com/Lotier/jboard)
-
+# JBOARD
 A TKL Handwired Keyboard
 
 * Keyboard Maintainer: [Lotier](https://github.com/lotier)
-* Hardware Supported: Adafruit Feather 32u4, Adafruit Bluefruit LE SPI Friend, Sparkfun SX1509
-* Based on Flutterby from [Wez](https://github.com/wez/qmk_firmware/)
+* Hardware Supported: Adafruit Feather 32u4 Basic, Adafruit Bluefruit LE SPI Friend, Sparkfun SX1509
+* Based on some of the work of Flutterby from [Wez](https://github.com/wez/qmk_firmware/)
 
 Make example for this keyboard (after setting up your build environment):
 

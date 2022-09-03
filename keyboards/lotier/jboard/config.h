@@ -27,7 +27,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* key matrix size */
 #define MATRIX_ROWS 6
 #define MATRIX_COLS 16
-#define DIODE_DIRECTION COL2ROW
 
 /*
  * Keyboard Matrix Assignments
@@ -43,16 +42,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MATRIX_ROW_PINS {D6, B7, B6, B5, D7, C6}
 // COL_PINS are directly controlled by the SX1509.
 // #define MATRIX_COL_PINS { }
+#define DIODE_DIRECTION COL2ROW
 
 #define BLUEFRUIT_LE_RST_PIN D2
 #define BLUEFRUIT_LE_CS_PIN D3
-#define BLUEFRUIT_LE_IRQ_PIN F1
+#define BLUEFRUIT_LE_IRQ_PIN F0
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
-#define DEBOUNCE 5
+#define DEBOUNCE 1
 
 /* disable debug print */
-//#define NO_DEBUG
+#define NO_DEBUG
 
 /* disable print */
-//#define NO_PRINT
+#define NO_PRINT
